@@ -61,16 +61,16 @@ Version 0.1 -->
 
 
 				       var locations = [
-				         ['Cannavino Library',  41.721943, -73.934141, 0, 'ShowBuilding.php'],
-				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'ShowBuilding.php'],
-				         ['Dyson Center',  41.724197, -73.933176, 0, 'ShowBuilding.php'],
-				         ['Fontaine  Hall',  41.725595, -73.933041, 0, 'ShowBuilding.php'],
-				         ['Hancock Center',  41.722925, -73.934498, 0, 'ShowBuilding.php'],
-				         ['Lowell Thomas Communications Center',  41.723268, -73.932827, 0, 'ShowBuilding.php'],
-				         ['McCann Center', 41.717302, -73.935121, 0, 'ShowBuilding.php'],
-				         ['Science and Allied Health Building',  41.722436, -73.930191, 0, 'ShowBuilding.php'],
-				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'ShowBuilding.php'],
-				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'ShowBuilding.php']
+				         ['Cannavino Library',  41.721943, -73.934141, 0, 'ShowBuilding.php?id=0'],
+				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'ShowBuilding.php?id=1'],
+				         ['Dyson Center',  41.724197, -73.933176, 0, 'ShowBuilding.php?id=2'],
+				         ['Fontaine  Hall',  41.725595, -73.933041, 0, 'ShowBuilding.php?id=3'],
+				         ['Hancock Center',  41.722925, -73.934498, 0, 'ShowBuilding.php?id=4'],
+				         ['Lowell Thomas Communications Center',  41.723268, -73.932827, 0, 'ShowBuilding.php?id=5'],
+				         ['McCann Center', 41.717302, -73.935121, 0, 'ShowBuilding.php?id=6'],
+				         ['Science and Allied Health Building',  41.722436, -73.930191, 0, 'ShowBuilding.php?id=7'],
+				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'ShowBuilding.php?id=8'],
+				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'ShowBuilding.php?id=9']
 						];
 
 						var Donnely = new google.maps.LatLng(41.720858, -73.932443);
@@ -114,7 +114,6 @@ Version 0.1 -->
 					To use this code on your website, get a free API key from Google.
 					Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 					-->
-
 		   			</div>
 		   		</div>
 		   	</div>

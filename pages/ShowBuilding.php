@@ -45,10 +45,15 @@ require('../scripts/connect_db.php');
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <h1></h1>
-                    <?php echo '<p>$name</p>'; ?>
+                    <?php?>
                 </div>
                     <div>
                     <?php
+                    if(isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                    }
+                    
+                    show_classrooms($dbc, $id);
 
                     ?>
                     </div>
