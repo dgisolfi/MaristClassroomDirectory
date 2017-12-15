@@ -22,7 +22,7 @@ Version 0.1 -->
 			<div id="header">
 				<div id="header-content">
 					<!-- logo/home link -->
-					<!-- <div id="logo"><span title="Home"><a href="home.php"><img src="limbologo.png"></a></span></div> -->
+					<div id="logo"><span title="Home"><a href=""><img src="logo.png"></a></span></div>
 					<!-- navbar -->
 		  			<div class="navbar">
 			   			<ul>
@@ -43,8 +43,8 @@ Version 0.1 -->
 			<div id="content_area">
 				<!-- homepage welcome message/title -->
 				<div id="banner">
-					<h1></h1>
-					<p>Marist College Classroom Directory</p>
+					<h1>Marist Classroom Directory</h1>
+					<p>please select the marker below for the building the classroom is in</p>
 				</div>
 					<div>
 
@@ -53,7 +53,7 @@ Version 0.1 -->
 					<script>
 					function myMap() {
 						var mapProp= {
-						    center:new google.maps.LatLng(41.720858, -73.932443),
+						    center:new google.maps.LatLng(41.722545, -73.934117),
 						    zoom:15,
 						    mapTypeId: google.maps.MapTypeId.SATELLITE 
 						};
@@ -62,15 +62,15 @@ Version 0.1 -->
 
 				       var locations = [
 				         ['Cannavino Library',  41.721943, -73.934141, 0, 'ShowBuilding.php'],
-				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'http://www.Marist.edu'],
-				         ['Dyson Center',  41.724197, -73.933176, 0, 'http://www.Marist.edu'],
-				         ['Fontaine  Hall',  41.725595, -73.933041, 0, 'http://www.Marist.edu'],
-				         ['Hancock Center',  41.722925, -73.934498, 0, 'http://www.Marist.edu'],
-				         ['Lowell Thomas Communications Center',  41.723268, -73.932827, 0, 'http://www.Marist.edu'],
-				         ['McCann Center', 41.717302, -73.935121, 0, 'http://www.Marist.edu'],
-				         ['Science and Allied Health Building',  41.722436, -73.930191, 0, 'http://www.Marist.edu'],
-				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'http://www.Marist.edu'],
-				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'http://www.Marist.edu']
+				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'ShowBuilding.php'],
+				         ['Dyson Center',  41.724197, -73.933176, 0, 'ShowBuilding.php'],
+				         ['Fontaine  Hall',  41.725595, -73.933041, 0, 'ShowBuilding.php'],
+				         ['Hancock Center',  41.722925, -73.934498, 0, 'ShowBuilding.php'],
+				         ['Lowell Thomas Communications Center',  41.723268, -73.932827, 0, 'ShowBuilding.php'],
+				         ['McCann Center', 41.717302, -73.935121, 0, 'ShowBuilding.php'],
+				         ['Science and Allied Health Building',  41.722436, -73.930191, 0, 'ShowBuilding.php'],
+				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'ShowBuilding.php'],
+				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'ShowBuilding.php']
 						];
 
 						var Donnely = new google.maps.LatLng(41.720858, -73.932443);

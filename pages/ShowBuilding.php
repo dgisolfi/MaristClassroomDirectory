@@ -8,7 +8,7 @@ Version 0.1 -->
 <html>
 <?php
 # Required PHP files to include
-//require('../scripts/connect_db.php');
+require('../scripts/connect_db.php');
 
 ?>
     <head>
@@ -23,7 +23,7 @@ Version 0.1 -->
             <div id="header">
                 <div id="header-content">
                     <!-- logo/home link -->
-                    <!-- <div id="logo"><span title="Home"><a href="home.php"><img src="limbologo.png"></a></span></div> -->
+                    <div id="logo"><span title="Home"><a href="home.php"><img src="logo.png"></a></span></div>
                     <!-- navbar -->
                     <div class="navbar">
                         <ul>
@@ -45,7 +45,7 @@ Version 0.1 -->
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <h1></h1>
-                    <?php echo '<p>$name</p>' ?>;
+                    <?php echo '<p>$name</p>'; ?>
                 </div>
                     <div>
                     <?php
