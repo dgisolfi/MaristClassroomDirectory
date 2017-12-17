@@ -219,7 +219,7 @@ body {
 .qltable th{
  	padding-top: 12px;
 	padding-bottom: 12px;
-	text-align: left;
+	text-align: center;
 	background-color: #d6232f;
 	color: white;
 }

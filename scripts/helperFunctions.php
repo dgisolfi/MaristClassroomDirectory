@@ -15,9 +15,6 @@ function check_results($results) {
 }
 
 
-// function get_building_name(){
-
-
 function validateName($input){
 	global $dbc;
 	$query = "SELECT first_name FROM users WHERE first_name='" . $input . "'";
@@ -60,8 +57,5 @@ function console_log( $data ){
   echo 'console.log('. json_encode( $data ) .')';
   echo '</script>';
 }
-
-
-
 
 ?>
