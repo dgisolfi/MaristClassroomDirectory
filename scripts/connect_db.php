@@ -6,7 +6,7 @@
 
 # Otherwise fail gracefully and explain the error. 
 
-$dbc = @mysqli_connect ( 'localhost', 'root', '', 'classrooms_db' )
+$dbc = @mysqli_connect ( 'localhost', 'root', 'root', 'classrooms_db' )
 
 
 OR die ( mysqli_connect_error() ) ;

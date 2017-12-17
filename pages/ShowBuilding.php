@@ -7,8 +7,11 @@ Version 0.1 -->
 <!DOCTYPE HTML>
 <html>
 <?php
+ini_set('display_errors', TRUE);
+error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
+require('../scripts/helperFunctions.php');
 
 ?>
     <head>
@@ -44,17 +47,18 @@ require('../scripts/connect_db.php');
             <div id="content_area">
                 <!-- homepage welcome message/title -->
                 <div id="banner">
-                    <h1></h1>
-                    <?php?>
-                </div>
-                    <div>
                     <?php
                     if(isset($_GET['id'])) {
                         $id = $_GET['id'];
                     }
-                    
-                    show_classrooms($dbc, $id);
-
+                    $buildingName = buildingToName($id);
+                    echo "<h1>" . $buildingName . "</h1>";
+                    ?>
+                    <p>Select a classroom below to view further details</p>
+                </div>
+                    <div>
+                    <?php
+                    // show_classrooms($dbc, $id);
                     ?>
                     </div>
 		   		</div>
