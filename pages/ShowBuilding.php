@@ -12,6 +12,7 @@ error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
+require('../scripts/showQuicklinkRecords.php');
 
 ?>
     <head>
@@ -56,10 +57,15 @@ require('../scripts/helperFunctions.php');
                     ?>
                     <p>Select a classroom below to view further details</p>
                 </div>
-                    <div>
-                    <?php
-                    // show_classrooms($dbc, $id);
-                    ?>
+                    <div>   <table class="qltable">
+                          <tr>
+                            <th>Room Type</th>
+                            <th>Room Number</th> 
+                          </tr>
+                            <?php
+                            show_quicklink_records($dbc, $id);
+                            ?>
+                        </table>
                     </div>
 		   		</div>
 		   	</div>
