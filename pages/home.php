@@ -22,18 +22,17 @@ Version 0.1 -->
 			<div id="header">
 				<div id="header-content">
 					<!-- logo/home link -->
-					<div id="logo"><span title="Home"><a href=""><img src="logo.png"></a></span></div>
+					<div id="logo"><span title="Home"><a href="home.php"><img src="logo.png"></a></span></div>
 					<!-- navbar -->
 		  			<div class="navbar">
 			   			<ul>
-						  	<li><a href=""></a></li>
-						 	<li><a href="">Search Classrooms</a></li>
+						 	<li><a href="searchClass.php">Search Classrooms</a></li>
 						 <!-- 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
 						  	<div class="dropdown-content">
 						  		<a href="">Lost</a>
 						  		<a href="">Found</a>
 						  	</div> -->
-						  	</li>
+						  	
 						  	<li class="adminlink"><a href="adminLogin.php">Admin</a></li>
 						</ul>
 					</div>
