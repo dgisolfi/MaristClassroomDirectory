@@ -63,7 +63,7 @@ Version 0.1 -->
 				         ['Cannavino Library',  41.721943, -73.934141, 0, 'ShowBuilding.php?id=1'],
 				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'ShowBuilding.php?id=2'],
 				         ['Dyson Center',  41.724197, -73.933176, 0, 'ShowBuilding.php?id=3'],
-				         ['51 Fulton',  42.724197, -73.933176, 0, 'ShowBuilding.php?id=4'],
+				         ['51 Fulton',  41.724019, -73.927368, 0, 'ShowBuilding.php?id=4'],
 				         ['Fontaine  Hall',  41.725595, -73.933041, 0, 'ShowBuilding.php?id=5'],
 				         ['Hancock Center',  41.722925, -73.934498, 0, 'ShowBuilding.php?id=6'],
 				         ['Lowell Thomas Communications Center',  41.723268, -73.932827, 0, 'ShowBuilding.php?id=7'],
@@ -71,8 +71,8 @@ Version 0.1 -->
 				         ['Science and Allied Health Building',  41.722436, -73.930191, 0, 'ShowBuilding.php?id=9'],
 				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'ShowBuilding.php?id=10'],
 				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'ShowBuilding.php?id=11'],
-				         ['West Cedar Townhouses(Lower)',  41.720877, -73.935169, 0, 'ShowBuilding.php?id=12'],
-				         ['West Cedar Townhouses(Upper)',  41.720877, -73.935169, 0, 'ShowBuilding.php?id=13'],
+				         ['West Cedar Townhouses(Lower)',  41.720358, -73.930163, 0, 'ShowBuilding.php?id=12'],
+				         ['West Cedar Townhouses(Upper)',  41.721476, -73.926073, 0, 'ShowBuilding.php?id=13'],
 						];
 
 						var Donnely = new google.maps.LatLng(41.720858, -73.932443);
