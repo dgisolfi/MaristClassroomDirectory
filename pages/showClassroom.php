@@ -31,14 +31,12 @@ require('../scripts/show_record.php');
                     <!-- navbar -->
                     <div class="navbar">
                         <ul>
-                            <li><a href=""></a></li>
-                            <li><a href="">Search Classrooms</a></li>
+                            <li><a href="searchClass.php">Search Classrooms</a></li>
                          <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
                             <div class="dropdown-content">
                                 <a href="">Lost</a>
                                 <a href="">Found</a>
                             </div> -->
-                            </li>
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
                     </div>

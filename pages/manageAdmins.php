@@ -6,6 +6,8 @@ Version 0.1 -->
 <!DOCTYPE HTML>
 <html>
 <?php
+ini_set('display_errors', TRUE);
+error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/showAdminRecords.php');
@@ -17,17 +19,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$id = $_POST['deleteID'];
 		delete_admin($dbc, $id);
 		echo '<div id="content_area"><h2>Admin Deleted</h2></div>';
-	} else {
-		$username = $_POST['username'];
-		$password1 = $_POST['password1'];
-		$password2 = $_POST['password2'];
-		insert_admin_record($dbc);	
+	// } else {
+	// 	$username = $_POST['username'];
+	// 	$password1 = $_POST['password1'];
+	// 	$password2 = $_POST['password2'];
+	// 	insert_admin_record($dbc);	
 	}
 }  			
 ?>
 	<head>
 		<meta charset = "utf-8">
-		<link rel="stylesheet" type="text/css" href="limboStyle.css">
+		<link rel="stylesheet" type="text/css" href="Style.css">
 		<title>Limbo - Admin</title>
 	</head>
 	<body>
@@ -37,18 +39,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<!--  header -->
 			<div id="header">
 				<div id="header-content">
-					<div id="logo"><span title="Home"><a href="home.php"><img src="limbologo.png"></a></span></div>
+					<!-- logo/home link -->
+					<div id="logo"><span title="Home"><a href="home.php"><img src="logo.png"></a></span></div>
+					<!-- navbar -->
 		  			<div class="navbar">
 			   			<ul>
-						  	<li><a href="founditems.php">Found Items</a></li>
-						 	<li><a href="lostitems.php">Lost Items</a></li>
-						 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
+						 	<li><a href="searchClass.php">Search Classrooms</a></li>
+						 <!-- 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
 						  	<div class="dropdown-content">
-						  		<a href="reportlost.php">Lost</a>
-						  		<a href="reportfound.php">Found</a>
-						  	</div>
-						  	</li>
-						  	<li class="adminlink active-page"><a href="adminLogin.php">Admin</a></li>
+						  		<a href="">Lost</a>
+						  		<a href="">Found</a>
+						  	</div> -->
+						  	
+						  	<li class="adminlink"><a href="adminLogin.php">Admin</a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,14 +63,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		   			<br/>
 		   			<a href="addAdmin.php" id="mgadmin">Add Admin</a>
 		   			<h1>Manage Admins</h1>
-					<p>Manage administrator accounts which can manage the Limbo database</p>
+					<p>Manage administrator accounts which can manage the classroom directory database</p>
 					<!-- create table -->
 		   			<table class="qltable">
 		   				<tr>
 		   					<th></th>
 		   					<th>ID</th>
-		   					<th>Userame</th>
-		   					<th>Date Created</th>
+		   					<th>First Name</th>
+		   					<th>Last Name</th>
+		   					<th>User Name</th>
+		   					<th>Email</th>
 		   				</tr>
 		   			<?php
 		   			# Populate table with all items from database

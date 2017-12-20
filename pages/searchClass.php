@@ -11,6 +11,7 @@ ini_set('display_errors', TRUE);
 error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
+require('../scripts/redirect.php');
 require('../scripts/helperFunctions.php');
 require('../scripts/showQuicklinkRecords.php');
 
@@ -50,10 +51,20 @@ require('../scripts/showQuicklinkRecords.php');
                     <h1>Enter a classroom number below:</h1>
                 </div>
                 <div id="entryform">
-                    <form action="searchResults.php" method="POST">
+                    <?php
+                    // If the search button is pressed
+                    if(isset($_POST['Search'])){
+                        // get all values from the form
+                        $room_num = $_POST['query'];
+                        $page = 'searchResults.php?room_num='.$room_num;
+                        redirect($page);
+                    }
+
+                    ?>
+                    <form method="POST">
                         <input id="text" name="query" placeholder="Enter classroom number" value="<?php if(isset($_POST['query'])) echo $_POST['query'];?>" required>
                         <br/>
-                        <p><input id="button" type="submit" value="Search"></p>
+                        <p><input id="button" name="Search" type="submit" value="Search"></p>
                     </form>  
 		   		</div>
 		   	</div>

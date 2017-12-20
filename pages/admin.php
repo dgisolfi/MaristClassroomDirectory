@@ -8,7 +8,7 @@ Version 0.1 -->
 <?php
 # Required PHP files to include
 require('../scripts/connect_db.php');
-require('../scripts/limboFunctions.php');
+require('../scripts/helperFunctions.php');
 require('../scripts/showLinkRecords.php');
 
 # Perform changes to database if made in table

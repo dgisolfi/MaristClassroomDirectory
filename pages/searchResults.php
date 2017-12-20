@@ -12,6 +12,7 @@ error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
+require('../scripts/showSearchRecord.php');
 require('../scripts/showQuicklinkRecords.php');
 
 ?>
@@ -48,11 +49,10 @@ require('../scripts/showQuicklinkRecords.php');
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <?php
-                    if(isset($_GET['id'])) {
-                        $id = $_GET['id'];
+                    if(isset($_GET['room_num'])) {
+                        $room_num = $_GET['room_num'];
                     }
-                    $buildingName = buildingToName($id);
-                    echo "<h1>" . $buildingName . "</h1>";
+                    echo "<h1>All rooms with number " . $room_num . "</h1>";
                     ?>
                     <p>Select a classroom below to view further details</p>
                 </div>
@@ -63,7 +63,7 @@ require('../scripts/showQuicklinkRecords.php');
                             <th>Room Number</th> 
                           </tr>
                             <?php
-                            show_quicklink_records($dbc, $id);
+                            show_search_records($dbc, $room_num);
                             ?>
                         </table>
                     </div>

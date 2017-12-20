@@ -10,7 +10,7 @@ ini_set('display_errors', TRUE);
 error_reporting(E_ALL);
 
 require('../scripts/redirect.php');
-require('../scripts/limboFunctions.php');
+require('../scripts/helperFunctions.php');
 
 if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 	$userName = $_POST['userName'];

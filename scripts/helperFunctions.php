@@ -17,7 +17,7 @@ function check_results($results) {
 
 function validateName($input){
 	global $dbc;
-	$query = "SELECT first_name FROM users WHERE first_name='" . $input . "'";
+	$query = "SELECT first_name FROM admins WHERE user_name='" . $input . "'";
 	# Execute the query
   	$results = mysqli_query($dbc, $query);
   	check_results($results);
@@ -31,7 +31,7 @@ function validateName($input){
 function validatePass($userName, $pw){
 	global $dbc;
 	#Retrieve password from DB and compare input to the actual value
-	$query = "SELECT pass FROM users WHERE first_name='" . $userName . "'" ;
+	$query = "SELECT pass FROM admins WHERE user_name='" . $userName . "'" ;
 	# Execute the query
   $results = mysqli_query($dbc, $query);
  	check_results($results);
