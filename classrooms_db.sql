@@ -22,30 +22,34 @@
 -- VALUES("Daniel", "Gisolfi", "stdg1", "Daniel.Gisolfi1@marist.edu", "dan");
 
 -- -- #Create the buildings table
--- CREATE TABLE IF NOT EXISTS buildings(
--- 	build_id 		INT 	 AUTO_INCREMENT 	PRIMARY KEY		NOT NULL,
--- 	building_Name	TEXT);
+CREATE TABLE IF NOT EXISTS buildings(
+	build_id 		INT 	 AUTO_INCREMENT 	PRIMARY KEY		NOT NULL,
+	building_Name	TEXT);
 
--- INSERT INTO buildings(building_Name)
--- VALUES("Cannavino Library"),
--- 		("Donnelly Hall"),
--- 		("Dyson Center"),
--- 		("Fontaine  Hall"),
--- 		("Hancock Center"),
--- 		("Lowell Thomas Communications Center"),
--- 		("McCann Center"),
--- 		("Science and Allied Health Building"),
--- 		("Steel Plant Studios and Gallery"),
--- 		("Student Center/Music Building");
+INSERT INTO buildings(building_Name)
+VALUES	("Cannavino Library"),
+		("Donnelly Hall"),
+		("Dyson Center"),
+		("51 Fulton"),	
+		("Fontaine Hall"),
+		("Hancock Center"),
+		("Lowell Thomas Communications Center"),	
+		("McCann Center"),
+		-- ("Rotunda"),
+		-- ("Saint Annes"),
+		("Science and Allied Health Building"),	
+		("Steel Plant Studios and Gallery"),
+		("Student Center/Music Building"),
+		("West Cedar Townhouses(Lower)"),
+		("West Cedar Townhouses(Upper)");
 
 
 -- CREATE TABLE IF NOT EXISTS rooms(
 -- 	room_id			INT 	 AUTO_INCREMENT 	PRIMARY KEY 		NOT NULL,
 -- 	room_type		SET('Lab', 'Classroom')		NOT NULL,
--- 	room_num		INT 						NOT NULL,
+-- 	room_num		TEXT 						NOT NULL,
 -- 	room_tel		INT,
 -- 	room_pod_ctrl 	SET('Crestron', 'Extron'),
--- 	-- room_pod_comp	TEXT,
 -- 	room_pod_sft	TEXT,
 -- 	room_pod_img	TEXT,
 -- 	fk_build_id 	INT  						NOT NULL);
@@ -63,8 +67,8 @@
 -- 		("Lab", 		110, 2398, "Extron", "/pages/software.txt", "/pages/logo.png",  1);
 
 
-
-
+-- INSERT INTO rooms(room_type, room_num, room_tel, room_pod_ctrl, room_pod_sft, room_pod_img, fk_build_id)
+-- VALUES("Lab", "258L-VM", 0000, "Extron", "/pages/software.txt", "../data/images/DN_LinLab.JPG", 2);
 
 
 

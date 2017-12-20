@@ -22,7 +22,7 @@ function show_record($dbc, $id, $room_num) {
       echo '<p>Available Software:</p>';
       echo '<object data='. $row['room_pod_sft'] .'></object>';
       echo '<p>Current Podium Setup:</p>';
-      echo '<img src='.$row['room_pod_img'].'>';
+      echo '<img src="'.$row['room_pod_img'].'"height="300" width="300">';
     }
       # Free up the results in memory
       mysqli_free_result( $results ) ;
