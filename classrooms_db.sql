@@ -39,28 +39,28 @@
 -- 		("Student Center/Music Building");
 
 
-CREATE TABLE IF NOT EXISTS rooms(
-	room_id			INT 	 AUTO_INCREMENT 	PRIMARY KEY 		NOT NULL,
-	room_type		SET('Lab', 'Classroom')		NOT NULL,
-	room_num		INT 						NOT NULL,
-	room_tel		INT,
-	room_pod_ctrl 	SET('Crestron', 'Extron'),
-	-- room_pod_comp	TEXT,
-	room_pod_sft	TEXT,
-	room_pod_img	TEXT,
-	fk_build_id 	INT  						NOT NULL);
+-- CREATE TABLE IF NOT EXISTS rooms(
+-- 	room_id			INT 	 AUTO_INCREMENT 	PRIMARY KEY 		NOT NULL,
+-- 	room_type		SET('Lab', 'Classroom')		NOT NULL,
+-- 	room_num		INT 						NOT NULL,
+-- 	room_tel		INT,
+-- 	room_pod_ctrl 	SET('Crestron', 'Extron'),
+-- 	-- room_pod_comp	TEXT,
+-- 	room_pod_sft	TEXT,
+-- 	room_pod_img	TEXT,
+-- 	fk_build_id 	INT  						NOT NULL);
 
 
 
-ALTER TABLE rooms
-ADD FOREIGN KEY (fk_build_id) REFERENCES buildings(build_id);
+-- ALTER TABLE rooms
+-- ADD FOREIGN KEY (fk_build_id) REFERENCES buildings(build_id);
 
 
-INSERT INTO rooms(room_type, room_num, room_tel, room_pod_ctrl, room_pod_sft, room_pod_img, fk_build_id)
-VALUES("Classroom", 	301, 3472, "Crestron", "/pages/software.txt", "/pages/logo.png", 1),
-		("Classroom", 	303, 3349, "Extron","/pages/software.txt", "/pages/logo.png", 1),
-		("Lab", 		333, 3247, "Crestron", "/pages/software.txt", "/pages/logo.png", 1),
-		("Lab", 		110, 2398, "Extron", "/pages/software.txt", "/pages/logo.png",  1);
+-- INSERT INTO rooms(room_type, room_num, room_tel, room_pod_ctrl, room_pod_sft, room_pod_img, fk_build_id)
+-- VALUES("Classroom", 	301, 3472, "Crestron", "/pages/software.txt", "/pages/logo.png", 1),
+-- 		("Classroom", 	303, 3349, "Extron","/pages/software.txt", "/pages/logo.png", 1),
+-- 		("Lab", 		333, 3247, "Crestron", "/pages/software.txt", "/pages/logo.png", 1),
+-- 		("Lab", 		110, 2398, "Extron", "/pages/software.txt", "/pages/logo.png",  1);
 
 
 

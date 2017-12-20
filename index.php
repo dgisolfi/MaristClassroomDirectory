@@ -1,1 +1,5 @@
-<?php header('Location: pages/home.php'); ?>
+<?php header('Location: pages/home.php'); 
+
+require('../pages');
+require('../scripts');
+?>
