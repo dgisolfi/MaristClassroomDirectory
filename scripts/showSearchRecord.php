@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 # Shows link records
 function show_search_records($dbc, $room_num) {
 	# Create database query for specified id
-	$query = "SELECT room_type, room_num, fk_build_id FROM rooms WHERE room_num = '". $room_num . "'ORDER BY room_num ASC;";
+	$query = "SELECT room_type, room_num, fk_build_id FROM rooms WHERE room_num LIKE '%". $room_num . "%' ORDER BY room_num ASC;";
 	
 	# Execute the query
 	$results = mysqli_query($dbc, $query);
