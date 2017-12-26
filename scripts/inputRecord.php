@@ -25,7 +25,7 @@ function insert_admin_record($dbc) {
 		echo '<div id="content_area"><h2>Passwords do not match. Please try again.</h2></div>';
 	} else {
 		$password1 = password_hash($password1, PASSWORD_DEFAULT);
-		$query = "INSERT INTO admins(user_name, pass) VALUES('" . $username . "','" . $password1 . "'";
+		$query = "INSERT INTO admins(user_name, pass) VALUES('" . $username . "' , '" . $password1 . "'";
 		$result = mysqli_query($dbc, $query);
 		check_results($result);
 		echo '<div id="content_area"><h2>Admin Added</h2></div>';

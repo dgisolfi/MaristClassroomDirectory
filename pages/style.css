@@ -12,7 +12,7 @@ html {
 
 body { 
 	margin:20; 
-	background-image:url("background.jpg");
+	/*background-image:url("background.jpg");*/
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -286,13 +286,19 @@ body {
 /*Item detail page layout*/
 #iteminfo{
 	margin:auto;
-	background:gray;
+	background:blue;
 	height:auto; 
 	width:40%;
 	padding:2%;
 	padding-top:1%;
 	border:1px solid black;
 	color:black;
+}
+
+#compImage{
+	height:auto;
+	width:100%;
+	transform: rotate(90deg);
 }
 
 /* Item page*/
