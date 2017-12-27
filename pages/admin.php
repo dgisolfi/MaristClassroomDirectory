@@ -9,28 +9,13 @@ Version 0.1 -->
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
-require('../scripts/showLinkRecords.php');
 
-# Perform changes to database if made in table
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-		# Delete an item from the database
-		if(isset($_POST['deleteID'])) {
-			$id = $_POST['deleteID'];
-			delete_item($dbc, $id);
-			echo '<div id="content_area"><h2>Item Deleted</h2></div>';
-		# Update the status of an item if it is changed
-		} else if(isset($_POST['updateID'])) {
-			$id = $_POST['updateID'];
-			$status = $_POST['status'];
-			update_status($dbc, $id, $status);
-			echo '<div id="content_area"><h2>Item Updated</h2></div>';
-		}
-	}   			
+			
 ?>
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Limbo - Admin</title>
+		<title>Administrator Home Page</title>
 	</head>
 	<body>
 		<body>
@@ -39,50 +24,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<!--  header -->
 			<div id="header">
 				<div id="header-content">
-					<div id="logo"><span title="Home"><a href="home.php"><img src="limbologo.png"></a></span></div>
+					<!-- logo/home link -->
+					<div id="logo"><span title="Home"><a href="home.php"><img src="logo.png"></a></span></div>
+					<!-- navbar -->
 		  			<div class="navbar">
 			   			<ul>
-						  	<li><a href="founditems.php">Found Items</a></li>
-						 	<li><a href="lostitems.php">Lost Items</a></li>
-						 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-						  	<div class="dropdown-content">
-						  		<a href="reportlost.php">Lost</a>
-						  		<a href="reportfound.php">Found</a>
-						  	</div>
-						  	</li>
-						  	<li class="adminlink active-page"><a href="adminLogin.php">Admin</a></li>
+						 	<li><a href="searchClass.php">Search Classrooms</a></li>
+						  	<li><a href="manageClassrooms.php">Manage Classrooms</a></li>
+						  	<li><a href="manageBuildings.php">Manage Buildings</a></li>
+						  	<li><a href="manageAdmins.php">Manage Admins</a></li>
+						  	<li class="adminlink"><a href="admin.php">Admin</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 	  		<!-- content area -->
 	  		<div id="content_area">
-		   		<div id="items">
-		   			<a href="manageAdmins.php" id="mgadmin">Manage Admins</a>
-		   			<h1>Admin Page</h1>
-					<p> Edit and remove records within the Limbo database</p>
-					<!-- create table -->
-		   			<table class="qltable">
-		   				<tr>
-		   					<th></th>
-		   					<th>ID</th>
-		   					<th>Name</th>
-		   					<th>Status</th>
-		   					<th>Date Reported</th>
-		   					<th>Date Updated</th>
-		   					<th>Location</th>
-		   				</tr>
-		   			<?php
-		   			# Populate table with all items from database
-		   			show_link_records($dbc, "admin");
-
-		   			# Close database connection
-		   			mysqli_close($dbc);
-		   			?>
-		   			</table>
-	   			 </div>
+		   		<div id="banner">
+		   			<h1>Admin Only Section</h1>
+		   			<p>Above on the navigation bar are a few  extra tools, only accessible with an admin account, are now available</p>
+		   		</div>
    			 	<!-- footer -->
-	  			<div id="footer"></div>
+	  			<div id="footer">
+					<div id="footer-content">
+						<p><a href= http://www.marist.edu>Marist College</a> | (845) 575-3000</p>
+						<p>3399 North Road, Poughkeepsie, NY, 12601</p>
+					</div>
+				</div>
   			<!-- end container -->
    			 </div>
 		 </div>

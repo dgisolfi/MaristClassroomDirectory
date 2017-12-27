@@ -41,7 +41,7 @@ function insert_admin_record($dbc) {
 }
 
 function delete_admin($dbc, $id) {
-	$query = "DELETE FROM ADMINS WHERE user_id='" . $id . "')";
+	$query = "DELETE FROM ADMINS WHERE user_id='" . $id . "'";
 	$result = mysqli_query($dbc, $query);
 	check_results($result);
 	echo '<div id="content_area"><h2>Admin Deleted</h2></div>';

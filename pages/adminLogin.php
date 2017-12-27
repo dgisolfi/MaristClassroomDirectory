@@ -30,7 +30,7 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 		echo '<div id="content_area"><h2>Password Invalid for Account.</h2></div>';
 	#Else allow for login and redirect
 	}else{
-		redirect('manageAdmins.php');
+		redirect('admin.php');
 	}
 }
 ?>
@@ -39,6 +39,7 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		 <title>Administrator Login</title>
 	</head>
 	<body>
 		<!-- container -->
@@ -52,11 +53,6 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
                     <div class="navbar">
                         <ul>
                             <li><a href="searchClass.php">Search Classrooms</a></li>
-                         <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-                            <div class="dropdown-content">
-                                <a href="">Lost</a>
-                                <a href="">Found</a>
-                            </div> -->
                             </li>
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
@@ -74,8 +70,7 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 		  				<input id="text" type="password" name="pw" placeholder="Enter Password" value="">
 		  				<br/>
 		  				<p><input id="button" type="submit" value="Login"></p>
-			  		</form> 
-			  		
+			  		</form> 	  		
 	   			 </div>
    			 	<!-- footer -->
 		  		<div id="footer">

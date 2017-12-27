@@ -22,5 +22,4 @@ function redirect($page){
   exit();
 }
 
-
 ?>

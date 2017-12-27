@@ -6,8 +6,6 @@ Version 0.1 -->
 <!DOCTYPE HTML>
 <html>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/showAdminRecords.php');
@@ -29,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<title>Limbo - Admin</title>
+		<title>Manage Administrators</title>
 	</head>
 	<body>
 		<body>
@@ -44,30 +42,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  			<div class="navbar">
 			   			<ul>
 						 	<li><a href="searchClass.php">Search Classrooms</a></li>
-						 <!-- 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-						  	<div class="dropdown-content">
-						  		<a href="">Lost</a>
-						  		<a href="">Found</a>
-						  	</div> -->
-						  	
-						  	<li class="adminlink"><a href="adminLogin.php">Admin</a></li>
+						  	<li><a href="manageClassrooms.php">Manage Classrooms</a></li>
+						  	<li><a href="manageBuildings.php">Manage Buildings</a></li>
+						  	<li><a href="manageAdmins.php">Manage Admins</a></li>
+						  	<li class="adminlink"><a href="admin.php">Admin</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+		
 	  		<!-- content area -->
 	  		<div id="content_area">
 		   		<div id="items">
-		   			<a href="manageAdmins.php" id="mgadmin">Manage Items</a>
-		   			<br/>
-		   			<a href="addAdmin.php" id="mgadmin">Add Admin</a>
 		   			<h1>Manage Admins</h1>
-					<p>Manage administrator accounts which can manage the classroom directory database</p>
+					<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below</p>
 					<!-- create table -->
 		   			<table class="qltable">
 		   				<tr>
 		   					<th></th>
-		   					<th>ID</th>
 		   					<th>First Name</th>
 		   					<th>Last Name</th>
 		   					<th>User Name</th>
@@ -79,11 +71,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		   			# Close database connection
 		   			mysqli_close($dbc);
+
+		   			if(isset($_POST['AddAdmins'])){
+		  				redirect('addAdmin.php');
+	  				}
 		   			?>
 		   			</table>
+		   			<form method="POST">
+						<input id="button" name="AddAdmins" type="submit" value="Add Admins">
+					</form>
 	   			 </div>
    			 	<!-- footer -->
-	  			<div id="footer"></div>
+	  			<div id="footer">
+					<div id="footer-content">
+						<p><a href= http://www.marist.edu>Marist College</a> | (845) 575-3000</p>
+						<p>3399 North Road, Poughkeepsie, NY, 12601</p>
+					</div>
+				</div>
   			<!-- end container -->
    			 </div>
 		 </div>

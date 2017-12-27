@@ -18,7 +18,7 @@ require('../scripts/show_record.php');
     <head>
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"> 
-        <title>Home</title>
+        <title>Classroom Details</title>
     </head>
     <body>
         <!-- container -->

@@ -18,7 +18,7 @@ require('../scripts/showQuicklinkRecords.php');
     <head>
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"> 
-        <title>Home</title>
+        <title>Building Viewer</title>
     </head>
     <body>
         <!-- container -->

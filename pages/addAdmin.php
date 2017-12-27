@@ -15,7 +15,7 @@ require('../scripts/inputRecord.php');
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Limbo - Add Admin</title>
+		<title>Add Administrators</title>
 	</head>
 	<body>
 		<body>
@@ -30,13 +30,10 @@ require('../scripts/inputRecord.php');
 		  			<div class="navbar">
 			   			<ul>
 						 	<li><a href="searchClass.php">Search Classrooms</a></li>
-						 <!-- 	<li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-						  	<div class="dropdown-content">
-						  		<a href="">Lost</a>
-						  		<a href="">Found</a>
-						  	</div> -->
-						  	
-						  	<li class="adminlink"><a href="adminLogin.php">Admin</a></li>
+						  	<li><a href="manageClassrooms.php">Manage Classrooms</a></li>
+						  	<li><a href="manageBuildings.php">Manage Buildings</a></li>
+						  	<li><a href="manageAdmins.php">Manage Admins</a></li>
+						  	<li class="adminlink"><a href="admin.php">Admin</a></li>
 						</ul>
 					</div>
 				</div>
@@ -47,13 +44,11 @@ require('../scripts/inputRecord.php');
 	  			if(isset($_POST['addAdmin'])){
 		  			insert_admin_record($dbc);
 	  			}
+	  			if(isset($_POST['manageAdmins'])){
+		  			redirect('manageAdmins.php');
+	  			}
 	  			?>
 		   		<div id="entryform">
-		   			<div id="items">
-			   			<a href="manageAdmins.php" id="mgadmin">Manage Items</a>
-			   			<br/>
-			   			<a href="addAdmin.php" id="mgadmin">Add Admin</a>
-					</div>
 		   			<h1> Create New Admin </h1>
 					<p>Create new admin to manage the classroom directory database</p>
 					<p>* = Required Field</p>
@@ -72,11 +67,16 @@ require('../scripts/inputRecord.php');
 					  	<input id="text" type="password" name="password2">
 					  	<br><br>
 					  	<input id="button" name="addAdmin" type="submit" value="Add Admin">
-					  	<input id="button" name="manageAdmins" type="submit"value="Manage Admins" action="manageAdmins.php">
+					  	<input id="button" name="manageAdmins" type="submit" value="Manage Admins">
 	  				</form> 
 	   			 </div>
    			 	<!-- footer -->
-	  			<div id="footer"></div>
+	  			<div id="footer">
+					<div id="footer-content">
+						<p><a href= http://www.marist.edu>Marist College</a> | (845) 575-3000</p>
+						<p>3399 North Road, Poughkeepsie, NY, 12601</p>
+					</div>
+				</div>
   			<!-- end container -->
    			 </div>
 		 </div>
