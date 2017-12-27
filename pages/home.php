@@ -72,7 +72,7 @@ Version 0.1 -->
 				         ['Steel Plant Studios and Gallery',  41.721352, -73.931117, 0, 'ShowBuilding.php?id=10'],
 				         ['Student Center/Music Building',  41.720877, -73.935169, 0, 'ShowBuilding.php?id=11'],
 				         ['West Cedar Townhouses(Lower)',  41.720358, -73.930163, 0, 'ShowBuilding.php?id=12'],
-				         ['West Cedar Townhouses(Upper)',  41.721476, -73.926073, 0, 'ShowBuilding.php?id=13'],
+				         ['West Cedar Townhouses(Upper)',  41.721478, -73.926059, 0, 'ShowBuilding.php?id=13'],
 						];
 
 						var Donnely = new google.maps.LatLng(41.720858, -73.932443);

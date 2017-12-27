@@ -14,7 +14,7 @@ require('../scripts/inputRecord.php');
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<link rel="stylesheet" type="text/css" href="">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Limbo - Add Admin</title>
 	</head>
 	<body>
