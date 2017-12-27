@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 	<head>
 		<meta charset = "utf-8">
-		<link rel="stylesheet" type="text/css" href="limboStyle.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Limbo - Admin</title>
 	</head>
 	<body>

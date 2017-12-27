@@ -18,7 +18,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(isset($_POST['deleteID'])) {
 		$id = $_POST['deleteID'];
 		delete_admin($dbc, $id);
-		echo '<div id="content_area"><h2>Admin Deleted</h2></div>';
 	// } else {
 	// 	$username = $_POST['username'];
 	// 	$password1 = $_POST['password1'];
@@ -59,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	  		<!-- content area -->
 	  		<div id="content_area">
 		   		<div id="items">
-		   			<a href="admin.php" id="mgadmin">Manage Items</a>
+		   			<a href="manageAdmins.php" id="mgadmin">Manage Items</a>
 		   			<br/>
 		   			<a href="addAdmin.php" id="mgadmin">Add Admin</a>
 		   			<h1>Manage Admins</h1>

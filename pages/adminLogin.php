@@ -30,7 +30,7 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 		echo '<div id="content_area"><h2>Password Invalid for Account.</h2></div>';
 	#Else allow for login and redirect
 	}else{
-		redirect('admin.php');
+		redirect('manageAdmins.php');
 	}
 }
 ?>
@@ -78,10 +78,14 @@ if ($_SERVER[ 'REQUEST_METHOD' ] == 'POST') {
 			  		
 	   			 </div>
    			 	<!-- footer -->
-	  			<div id="footer"></div>
+		  		<div id="footer">
+					<div id="footer-content">
+						<p><a href= http://www.marist.edu>Marist College</a> | (845) 575-3000</p>
+						<p>3399 North Road, Poughkeepsie, NY, 12601</p>
+					</div>
+				</div>
   			<!-- end container -->
-   			 </div>
-		 </div>
+   			</div>
 	</body>
 </html>
 

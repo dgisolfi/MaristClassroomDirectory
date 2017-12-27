@@ -11,16 +11,16 @@ USE Classroomrooms_db;
 CREATE TABLE IF NOT EXISTS admins(
 	user_id 		INT 	AUTO_INCREMENT 	PRIMARY KEY		NOT NULL,
 	first_name 		TEXT,
-	last_name 		TEXT,
-	user_name		TEXT,
+	last_name 		TEXT	NOT NULL,
+	user_name		TEXT	NOT NULL,
 	email 			TEXT,
-	pass 			TEXT);
+	pass 			TEXT	NOT NULL);
 
 
 
 -- #Populate the user table
 INSERT INTO admins(first_name, last_name, user_name, email, pass)
-VALUES("Daniel", "Gisolfi", "stdg1", "Daniel.Gisolfi1@marist.edu", "dan");
+VALUES("Daniel", "Gisolfi", "stdg1", "Daniel.Gisolfi1@marist.edu", "$2y$10$CN0TG0C2jYy57.MQkCjNduFRscTmLJpRUSHZBMyAVfIVzUuD2Ze8e");
 
 -- #Create the buildings table
 CREATE TABLE IF NOT EXISTS buildings(

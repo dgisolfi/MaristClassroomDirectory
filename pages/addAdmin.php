@@ -49,18 +49,30 @@ require('../scripts/inputRecord.php');
 	  			}
 	  			?>
 		   		<div id="entryform">
+		   			<div id="items">
+			   			<a href="manageAdmins.php" id="mgadmin">Manage Items</a>
+			   			<br/>
+			   			<a href="addAdmin.php" id="mgadmin">Add Admin</a>
+					</div>
 		   			<h1> Create New Admin </h1>
 					<p>Create new admin to manage the classroom directory database</p>
 					<p>* = Required Field</p>
 					<form method="POST">
+					  	<br>First Name:<br>
+					  	<input id="text" name="first_name" value="<?php if(isset($_POST['first_name'])) echo $_POST['first_name'];?>">
+					  	<br>*Last Name<br>
+					  	<input id="text" name="last_name" value="<?php if(isset($_POST['last_name'])) echo $_POST['last_name'];?>">
 					  	<br>*Username:<br>
 					  	<input id="text" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username'];?>">
+					  	 <br>Email:<br>
+					  	<input id="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>">
 						<br>*Password:<br>
 					  	<input id="text" type="password" name="password1">
 					  	<br>*Confirm Password:<br>
 					  	<input id="text" type="password" name="password2">
 					  	<br><br>
-					  	<input id="button" name="addAdmin" type="submit" value="Submit">
+					  	<input id="button" name="addAdmin" type="submit" value="Add Admin">
+					  	<input id="button" name="manageAdmins" type="submit"value="Manage Admins" action="manageAdmins.php">
 	  				</form> 
 	   			 </div>
    			 	<!-- footer -->

@@ -178,6 +178,7 @@ body {
 .qltable{
 	margin:auto;
 	margin-bottom: 100px;
+	background: black;
 }
 
 .qltable table {
@@ -254,7 +255,7 @@ body {
 /*Form layout for lost/found reporting pages*/
 #entryform{
 	margin:auto;
-	background:gray;
+	background:lightgray;
 	height:auto; 
 	width:40%;
 	padding:2%;
@@ -277,6 +278,17 @@ body {
 	margin-bottom: 100px;
 	font-family: "Times New Roman", Times, serif;
 	
+}
+
+#items{
+	margin:auto;
+	background:lightgray;
+	height:auto; 
+	width:50%;
+	padding:2%;
+	padding-top:1%;
+	border:1px solid black;
+	color:black;
 }
 
 #text{
@@ -313,26 +325,15 @@ body {
 }
 
 #button:hover {
-	background-color: gray
+	background-color: black
 }
 
 #button:active {
-	background-color: #d6232f;
+	background-color: black;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
 
-
-/*Admin Login Page*/
-
-#loginform {
-	background:#666;
-	height:300px; 
-	padding:20px;
-	clear: both;
-	color: white;
-	margin: 10px;
-}
 
 .delico{
 	width:20px;
