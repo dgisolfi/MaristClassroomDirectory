@@ -48,6 +48,14 @@ function delete_admin($dbc, $id) {
 
 }
 
+function delete_class($dbc, $id) {
+	$query = "DELETE FROM rooms WHERE room_id='" . $id . "'";
+	$result = mysqli_query($dbc, $query);
+	check_results($result);
+	echo '<div id="content_area"><h2>Room Deleted</h2></div>';
+
+}
+
 
 
 function alert($result){
