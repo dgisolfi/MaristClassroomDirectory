@@ -1,1 +1,70 @@
-Available Software
+Adium Project Adium 1.5.10.4
+Adobe Acrobat Pro DC 2017.009.20058
+Adobe After Effects CC 2017.2
+Adobe Air 26
+Adobe Animate CC 2017.5
+Adobe Audition CC 2017.1.1
+Adobe Bridge CC 2017
+Adobe Dreamweaver CC 2017.5
+Adobe Fireworks 12.0.1.274
+Adobe Flash Builder 4.7
+Adobe Flash Player Plugin 26.0.0.131
+Adobe Gaming SDK 1.4
+Adobe Illustrator CC 2017.1
+Adobe InCopy CC 2017
+Adobe InDesign CC 2017.1
+Adobe Lightroom CC 2015.12
+Adobe Media Encoder CC 2017.1.2
+Adobe Muse CC 2017
+Adobe Photoshop CC 2017.1.1
+Adobe Prelude CC 2017.1.2
+Adobe Premiere CC 2017.1.2
+Adobe Scout 1.1.3.354121
+Adobe Speed Grade CC 2015.1
+Apple Compressor 4.3.2
+Apple Final Cut Pro 10.3.4
+Apple Garage Band 10.2.0
+Apple iMovie 10.1.6
+Apple iTunes 12.6.2
+Apple Keynote 6.6.2
+Apple macOS 10.12.6
+Apple Motion 5.3.2
+Apple Numbers 3.6.2
+Apple Pages 6.2
+Apple Quicktime Player 10.4
+Apple Safari 10.1.2
+Apple Xcode 8.3.3
+ArtStor OIV 4.1
+Audacity Team Audacity + LAME 2.1.3
+Autodesk Maya 2018
+Autodesk Mudbox 2018
+Axure AxureRP 8.0.0.3338
+Balsamiq Mockups 3.5.14
+BareBones Software BBEdit 11.6.7
+BOINC World Community Grid Agent 7.6.34
+Brown University tn3270x 3.4.0
+Faronics DeepFreeze 6.12
+GameSalad GameSalad 1.25.80
+GmbH Cyberduck 6.2.0(25806)
+Google Chrome 60.0.3112.113
+IBM SPSS Statistics 24
+Justinmind Prototyper 8.0.1
+Maarten Foukhar Burn 2.5.1(24)
+McAfee Endpoint Protection 10.2.2
+McAfee ePO Agent 5.0.5
+Microsoft Excel 2016
+Microsoft OneNote 2016
+Microsoft PowerPoint 2016
+Microsoft Silverlight 5
+Microsoft Skype 7.56
+Microsoft Word 2016
+Mozilla Firefox 54.0.1
+Oracle Java JDK 8u144 x64
+Quark QuarkXPress 11.2.0.6
+Sassafrass K2 client 7.4.1.1
+Tim Kosse Filezilla 3.27.1
+Twine Twine 2.1.3
+Tynsoe.org GeekTool 3.3.1
+Unity Unity 2017.1.0f3
+University of Michigan Fugu 1.2.0
+VideoLAN VLC 2.2.6

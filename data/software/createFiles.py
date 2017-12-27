@@ -140,7 +140,7 @@ roomNums = [
 for x in range(1,134):
 	filename = roomNums[x]
 	writeFile = open(filename, 'w')
-	writeFile.write("Available Software")
+	writeFile.write("software list not available currently")
 	writeFile.close()
 	if x % 2:
 		print x ," are done"
