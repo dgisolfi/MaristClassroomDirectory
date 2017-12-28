@@ -6,9 +6,11 @@ Version 0.1 -->
 <!DOCTYPE HTML>
 <html>
 <?php
+ini_set('display_errors', TRUE);
+error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
-require('../scripts/showAdminRecords.php');
+require('../scripts/showRecords.php');
 require('../scripts/inputRecord.php');
 
 # Perform changes to database if made in table
@@ -54,8 +56,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	  		<!-- content area -->
 	  		<div id="content_area">
 		   		<div id="items">
-		   			<h1>Manage Admins</h1>
-					<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below</p>
+		   			<div id="banner">
+			   			<h1>Manage Admins</h1>
+						<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below</p>
+					</div>
 					<!-- create table -->
 		   			<table class="qltable">
 		   				<tr>

@@ -15,7 +15,7 @@ require('../scripts/inputRecord.php');
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Add Administrators</title>
+		<title>Add Classroom</title>
 	</head>
 	<body>
 		<body>
@@ -41,32 +41,32 @@ require('../scripts/inputRecord.php');
 	  		<!-- content area -->
 	  		<div id="content_area">
 	  			<?php
-	  			if(isset($_POST['addAdmin'])){
-		  			insert_admin_record($dbc);
+	  			if(isset($_POST['addClass'])){
+		  			insert_class_record($dbc);
 	  			}
-	  			if(isset($_POST['manageAdmins'])){
-		  			redirect('manageAdmins.php');
-	  			}
+	 
 	  			?>
 		   		<div id="entryform">
-		   			<h1> Create New Admin </h1>
-					<p>Create new admin to manage the classroom directory database</p>
-					<p>* = Required Field</p>
+		   			<h1> Create New Classroom </h1>
+					<p>Create new records of classrooms in the database</p>
+					<p>All Fields are required </p>
 					<form method="POST">
-					  	<br>First Name:<br>
-					  	<input id="text" name="first_name" value="<?php if(isset($_POST['first_name'])) echo $_POST['first_name'];?>">
-					  	<br>*Last Name<br>
-					  	<input id="text" name="last_name" value="<?php if(isset($_POST['last_name'])) echo $_POST['last_name'];?>" required>
-					  	<br>*Username:<br>
-					  	<input id="text" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username'];?>" required>
-					  	 <br>Email:<br>
-					  	<input id="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>">
-						<br>*Password:<br>
-					  	<input id="text" type="password" name="password1" required>
-					  	<br>*Confirm Password:<br>
-					  	<input id="text" type="password" name="password2" required>
-					  	<br><br>
-					  	<input id="button" name="addAdmin" type="submit" value="Add Admin">
+					  	<br>Room Type (Lab or CLassroom):<br>
+					  	<input id="text" name="room_type" value="<?php if(isset($_POST['room_type'])) echo $_POST['room_type'];?>" required>
+					  	<br>Room Number<br>
+					  	<input id="text" name="room_num" value="<?php if(isset($_POST['room_num'])) echo $_POST['room_num'];?>" required>
+					  	<br>Room Telephone Extension:<br>
+					  	<input id="text" name="room_tel" value="<?php if(isset($_POST['room_tel'])) echo $_POST['room_tel'];?>" required>
+					  	 <br>Room Podium Controller Type:<br>
+					  	<input id="text" name="room_pod_ctrl" value="<?php if(isset($_POST['room_pod_ctrl'])) echo $_POST['room_pod_ctrl'];?>" required>
+						<br>Room software list file path:<br>
+					  	<input id="text" name="room_pod_sft" value="<?php if(isset($_POST['room_pod_sft'])) echo $_POST['room_pod_sft'];?>" required>
+					  	<br>Room image file path:<br>
+					  	<input id="text" name="room_pod_img" value="<?php if(isset($_POST['room_pod_img'])) echo $_POST['room_pod_img'];?>" required>
+					  	<br>Building ID:<br>
+					  	<input id="text" name="fk_build_id" value="<?php if(isset($_POST['fk_build_id'])) echo $_POST['fk_build_id'];?>" required>
+					  	<br></br>
+					  	<input id="button" name="addClass" type="submit" value="Add Classroom">
 	  				</form> 
 	   			 </div>
    			 	<!-- footer -->

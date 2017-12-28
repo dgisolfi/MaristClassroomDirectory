@@ -15,7 +15,7 @@ require('../scripts/inputRecord.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(isset($_POST['deleteID'])) {
 		$id = $_POST['deleteID'];
-		delete_admin($dbc, $id);
+		delete_building($dbc, $id);
 	// } else {
 	// 	$username = $_POST['username'];
 	// 	$password1 = $_POST['password1'];
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="Style.css">
-		<title>Manage Administrators</title>
+		<title>Manage Buildings</title>
 	</head>
 	<body>
 		<body>
@@ -54,35 +54,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	  		<!-- content area -->
 	  		<div id="content_area">
 		   		<div id="items">
-		   			<h1>Manage Admins</h1>
-					<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below</p>
+		   			<div id="banner">
+			   			<h1>Manage Buildings</h1>
+						<p>Add or Remove buildings within the database</p>
+					</div>
 					<!-- create table -->
 		   			<table class="qltable">
 		   				<tr>
 		   					<th></th>
-		   					<th>Room ID</th>
-		   					<th>Room Type</th>
-		   					<th>Room Number</th>
-		   					<th>Room Extension</th>
-		   					<th>Room Podium Controller</th>
-		   					<th>Room Software File Path</th>
-		   					<th>Room Image File Path</th>
 		   					<th>Building ID</th>
+		   					<th>Building Name</th>
 		   				</tr>
 		   			<?php
 		   			# Populate table with all items from database
-		   			show_class_records($dbc);
+		   			show_building_records($dbc);
 
 		   			# Close database connection
 		   			mysqli_close($dbc);
 
-		   			if(isset($_POST['AddAdmins'])){
-		  				redirect('addAdmin.php');
+		   			if(isset($_POST['AddBuild'])){
+		  				redirect('addBuilding.php');
 	  				}
 		   			?>
 		   			</table>
 		   			<form method="POST">
-						<input id="button" name="AddAdmins" type="submit" value="Add Admins">
+						<input id="button" name="AddBuild" type="submit" value="Add Building">
 					</form>
 	   			 </div>
    			 	<!-- footer -->

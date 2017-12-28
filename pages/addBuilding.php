@@ -15,7 +15,7 @@ require('../scripts/inputRecord.php');
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Add Administrators</title>
+		<title>Add Building</title>
 	</head>
 	<body>
 		<body>
@@ -41,32 +41,22 @@ require('../scripts/inputRecord.php');
 	  		<!-- content area -->
 	  		<div id="content_area">
 	  			<?php
-	  			if(isset($_POST['addAdmin'])){
-		  			insert_admin_record($dbc);
+	  			if(isset($_POST['addBuild'])){
+		  			insert_build_record($dbc);
 	  			}
-	  			if(isset($_POST['manageAdmins'])){
-		  			redirect('manageAdmins.php');
-	  			}
+	 
 	  			?>
 		   		<div id="entryform">
-		   			<h1> Create New Admin </h1>
-					<p>Create new admin to manage the classroom directory database</p>
-					<p>* = Required Field</p>
+		   			<h1> Create New Building </h1>
+					<p>Create new records of Buildings in the database</p>
+					<p>All Fields are required </p>
 					<form method="POST">
-					  	<br>First Name:<br>
-					  	<input id="text" name="first_name" value="<?php if(isset($_POST['first_name'])) echo $_POST['first_name'];?>">
-					  	<br>*Last Name<br>
-					  	<input id="text" name="last_name" value="<?php if(isset($_POST['last_name'])) echo $_POST['last_name'];?>" required>
-					  	<br>*Username:<br>
-					  	<input id="text" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username'];?>" required>
-					  	 <br>Email:<br>
-					  	<input id="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>">
-						<br>*Password:<br>
-					  	<input id="text" type="password" name="password1" required>
-					  	<br>*Confirm Password:<br>
-					  	<input id="text" type="password" name="password2" required>
-					  	<br><br>
-					  	<input id="button" name="addAdmin" type="submit" value="Add Admin">
+					  	<br>Building ID<br>
+					  	<input id="text" name="build_id" value="<?php if(isset($_POST['build_id'])) echo $_POST['build_id'];?>" required>
+					  	<br>Building Name<br>
+					  	<input id="text" name="building_Name" value="<?php if(isset($_POST['building_Name'])) echo $_POST['building_Name'];?>" required>
+					  	<br></br>
+					  	<input id="button" name="addBuild" type="submit" value="Add Building">
 	  				</form> 
 	   			 </div>
    			 	<!-- footer -->
@@ -81,9 +71,3 @@ require('../scripts/inputRecord.php');
 		 </div>
 	</body>
 </html>
-
-
-
-					
-
-

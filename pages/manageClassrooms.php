@@ -57,8 +57,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	  		<!-- content area -->
 	  		<div id="content_area">
 		   		<div id="items">
-		   			<h1>Manage Classrooms</h1>
-					<p></p>
+			   		<div id="banner">
+			   			<h1>Manage Classrooms</h1>
+			   			<p>Add or Remove classroom records that can be accessed </p>
+			   		</div>
 					<!-- create table -->
 		   			<table class="qltable">
 		   				<tr>
@@ -79,13 +81,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		   			# Close database connection
 		   			mysqli_close($dbc);
 
-		   			if(isset($_POST['AddAdmins'])){
-		  				redirect('addAdmin.php');
+		   			if(isset($_POST['addClass'])){
+		  				redirect('addClassroom.php');
 	  				}
 		   			?>
 		   			</table>
 		   			<form method="POST">
-						<input id="button" name="AddAdmins" type="submit" value="Add Admins">
+						<input id="button" name="addClass" type="submit" value="Add Classroom">
 					</form>
 	   			 </div>
    			 	<!-- footer -->

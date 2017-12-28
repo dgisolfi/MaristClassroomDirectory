@@ -148,6 +148,7 @@ body {
 #banner p {
 	font-size:20px;
 	text-align:center;
+	line-height: 110%;
 }
 
 @keyframes fadeInUp {
@@ -172,19 +173,20 @@ body {
 	height:auto;
 	margin:auto;
 	overflow:hidden;
+	margin-bottom: 100px;
 }
 
 
 .qltable{
 	margin:auto;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	background: black;
 }
 
 .qltable table {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  	border-collapse: collapse;
- 	width: 100%;
+ 	width: 50%;
 }
 .qltable th, td {
 	border: 1px solid #ddd;
@@ -227,6 +229,13 @@ body {
   color: lightblue;
 }
 
+
+#classTable {
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }
+
 /* Page footer */
 #footer { 
 	position:fixed;
@@ -262,6 +271,7 @@ body {
 	padding-top:1%;
 	border:1px solid black;
 	color:black;
+	margin-bottom: 100px;
 }
 
 /*Item detail page layout*/
@@ -289,6 +299,7 @@ body {
 	padding-top:1%;
 	border:1px solid black;
 	color:black;
+	margin-bottom: 100px;
 }
 
 #text{
