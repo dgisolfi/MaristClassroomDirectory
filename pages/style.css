@@ -187,6 +187,8 @@ body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  	border-collapse: collapse;
  	width: 50%;
+ 	margin-left: auto;
+   	margin-right: auto;
 }
 .qltable th, td {
 	border: 1px solid #ddd;

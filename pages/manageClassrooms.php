@@ -59,9 +59,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		   		<div id="items">
 			   		<div id="banner">
 			   			<h1>Manage Classrooms</h1>
-			   			<p>Add or Remove classroom records that can be accessed </p>
+			   			<p>Add or Remove classroom records that can be accessed. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below.</p>
 			   		</div>
 					<!-- create table -->
+				<div style="overflow-x:auto;">
+						
 		   			<table class="qltable">
 		   				<tr>
 		   					<th></th>
@@ -86,6 +88,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	  				}
 		   			?>
 		   			</table>
+		   		</div>
 		   			<form method="POST">
 						<input id="button" name="addClass" type="submit" value="Add Classroom">
 					</form>

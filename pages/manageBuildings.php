@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		   		<div id="items">
 		   			<div id="banner">
 			   			<h1>Manage Buildings</h1>
-						<p>Add or Remove buildings within the database</p>
+						<p>Add or Remove buildings within the database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below.</p>
 					</div>
 					<!-- create table -->
 		   			<table class="qltable">

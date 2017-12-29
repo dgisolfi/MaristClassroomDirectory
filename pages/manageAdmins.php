@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		   		<div id="items">
 		   			<div id="banner">
 			   			<h1>Manage Admins</h1>
-						<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below</p>
+						<p>Manage administrator accounts which can manage the classroom directory database. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below.</p>
 					</div>
 					<!-- create table -->
 		   			<table class="qltable">
