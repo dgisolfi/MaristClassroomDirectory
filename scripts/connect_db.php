@@ -1,3 +1,8 @@
+<!--connect_db.php
+Create a Database Connection 
+Author: Daniel Gisolfi
+Version 1.0 -->
+
 <?php 
 # CONNECT TO MySQL DATABASE.
 

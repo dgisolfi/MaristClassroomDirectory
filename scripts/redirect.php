@@ -1,7 +1,7 @@
 <!-- redirect.php
 redirect to another page for Limbo
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+Authors: Daniel Gisolfi
+Version 1.0 -->
 
 <?php
 

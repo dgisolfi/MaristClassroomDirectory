@@ -1,7 +1,7 @@
-<!-- inputRecord.php
-Various functions used in limbo
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+<!--inputRecord.php
+Various input and delete functions used in MaristClassroom Directory
+Authors:  Daniel Gisolfi
+Version 1.0 -->
 
 <?php
 require('connect_db.php');
@@ -74,6 +74,7 @@ function insert_build_record($dbc) {
 	// redirect($page);
 }
 
+#Delete record in the admin table with the id given
 function delete_admin($dbc, $id) {
 	$query = "DELETE FROM ADMINS WHERE user_id='" . $id . "'";
 	$result = mysqli_query($dbc, $query);
@@ -82,6 +83,7 @@ function delete_admin($dbc, $id) {
 
 }
 
+#Delete record in the class table with the id given
 function delete_class($dbc, $id) {
 	$query = "DELETE FROM rooms WHERE room_id='" . $id . "'";
 	$result = mysqli_query($dbc, $query);
@@ -90,7 +92,7 @@ function delete_class($dbc, $id) {
 
 }
 
-
+#Delete record in the building table with the id given
 function delete_building($dbc, $id) {
 	$query = "DELETE FROM buildings WHERE build_id='" . $id . "'";
 	$result = mysqli_query($dbc, $query);
@@ -98,16 +100,5 @@ function delete_building($dbc, $id) {
 	echo '<div id="content_area"><h2>Building Deleted</h2></div>';
 
 }
-
-
-
-function alert($result){
-	if (!$result){
-			echo '<div id="content_area"><h2>Please submit a valid record!</h2></div>';
-		}else{
-			echo '<div id="content_area"><h2>Record Saved in Database</h2></div>';
-	}
-}
-
 ?>
 

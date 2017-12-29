@@ -1,20 +1,16 @@
-
 <!--searchResults.php
-Create a site for the classroom view of Marist College
+A site to display search results
 Author: Daniel Gisolfi
-Version 0.1 -->
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
 require('../scripts/showSearchRecord.php');
 require('../scripts/showQuicklinkRecords.php');
-
 ?>
     <head>
         <meta charset = "utf-8">
@@ -33,11 +29,6 @@ require('../scripts/showQuicklinkRecords.php');
                     <div class="navbar">
                         <ul>
                             <li><a href="searchClass.php">Search Classrooms</a></li>
-                         <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-                            <div class="dropdown-content">
-                                <a href="">Lost</a>
-                                <a href="">Found</a>
-                            </div> -->
                             </li>
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
@@ -49,9 +40,11 @@ require('../scripts/showQuicklinkRecords.php');
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <?php
+                    #Get the room number of the search
                     if(isset($_GET['room_num'])) {
                         $room_num = $_GET['room_num'];
                     }
+
                     echo "<h1>All rooms with number " . $room_num . "</h1>";
                     ?>
                     <p>Select a classroom below to view further details</p>
@@ -63,6 +56,7 @@ require('../scripts/showQuicklinkRecords.php');
                             <th>Room Number</th> 
                           </tr>
                             <?php
+                            #show all search results in a table
                             show_search_records($dbc, $room_num);
                             ?>
                         </table>

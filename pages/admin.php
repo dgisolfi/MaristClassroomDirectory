@@ -1,16 +1,14 @@
 <!-- admin.php
-Create a site for Limbo using CSS
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+A starting page for admins after login
+Authors: Daniel Gisolfi
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
 <?php
 # Required PHP files to include
 require('../scripts/connect_db.php');
-require('../scripts/helperFunctions.php');
-
-			
+require('../scripts/helperFunctions.php');			
 ?>
 	<head>
 		<meta charset = "utf-8">

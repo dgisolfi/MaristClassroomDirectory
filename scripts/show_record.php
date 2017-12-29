@@ -1,3 +1,7 @@
+<!--show_record.php
+Display the records for a classroom on the showClassroom page
+Author: Daniel Gisolfi
+Version 1.0 -->
 <?php
 $debug = true;
 
@@ -17,7 +21,6 @@ function show_record($dbc, $id, $room_num) {
       echo '<p>Room Type: ' . $row['room_type'] . '</p>';
       echo '<p>Room Number: ' . $row['room_num'] . '</p>';
       echo '<p>Phone Number: '. $row['room_tel'] .'</p>';
-      // echo '<p>Podium Computer Details: '. $row['room_pod_comp'] .'</p>';
       echo '<p>Podium Controller type: '. $row['room_pod_ctrl'] .'</p>';
       echo '<p>Available Software:</p>';
       echo '<object data='. $row['room_pod_sft'] .'></object>';

@@ -1,5 +1,7 @@
-
-
+<!--ShowQuicklinkRecords.php
+Show records with links to the full vioew of records
+Author: Daniel Gisolfi
+Version 1.0 -->
 <?php
 ini_set('display_errors', TRUE);
 error_reporting(E_ALL);

@@ -1,7 +1,7 @@
 <!-- manageAdmins.php
-Create a site for Limbo using CSS
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+A site to manage all records of Buildings within the DB
+Authors: Daniel Gisolfi
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
@@ -16,11 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(isset($_POST['deleteID'])) {
 		$id = $_POST['deleteID'];
 		delete_building($dbc, $id);
-	// } else {
-	// 	$username = $_POST['username'];
-	// 	$password1 = $_POST['password1'];
-	// 	$password2 = $_POST['password2'];
-	// 	insert_admin_record($dbc);	
 	}
 }  			
 ?>

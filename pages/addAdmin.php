@@ -1,15 +1,12 @@
 <!-- addAdmin.php
-Create a site for Limbo using CSS
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+A form to add a administrator
+Authors: Daniel Gisolfi
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
-
+#Required PHP files to include
 require('../scripts/inputRecord.php');
-
 ?>
 <html>
 	<head>

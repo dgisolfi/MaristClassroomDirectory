@@ -1,19 +1,15 @@
-
 <!--ShowBuilding.php
-Create a site for the classroom view of Marist College
+Create a site for the Building view of Marist College
 Author: Daniel Gisolfi
-Version 0.1 -->
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
 require('../scripts/showQuicklinkRecords.php');
-
 ?>
     <head>
         <meta charset = "utf-8">
@@ -32,11 +28,6 @@ require('../scripts/showQuicklinkRecords.php');
                     <div class="navbar">
                         <ul>
                             <li><a href="searchClass.php">Search Classrooms</a></li>
-                         <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-                            <div class="dropdown-content">
-                                <a href="">Lost</a>
-                                <a href="">Found</a>
-                            </div> -->
                             </li>
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
@@ -48,20 +39,24 @@ require('../scripts/showQuicklinkRecords.php');
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <?php
+                    #get the ID of the building
                     if(isset($_GET['id'])) {
                         $id = $_GET['id'];
                     }
+                    #convert building ID to name
                     $buildingName = buildingToName($id);
                     echo "<h1>" . $buildingName . "</h1>";
                     ?>
                     <p>Select a classroom below to view further details</p>
                 </div>
-                    <div>   <table class="qltable">
+                    <div>   
+                        <table class="qltable">
                           <tr>
                             <th>Room Type</th>
                             <th>Room Number</th> 
                           </tr>
                             <?php
+                            #Show all records of the buildings with links 
                             show_quicklink_records($dbc, $id);
                             ?>
                         </table>

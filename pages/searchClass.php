@@ -1,20 +1,15 @@
-
 <!--searchClass.php
-Create a site for the classroom view of Marist College
+A site to search all records in the databse of rooms
 Author: Daniel Gisolfi
-Version 0.1 -->
-
+Version 1.0 -->
 <!DOCTYPE HTML>
 <html>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/redirect.php');
 require('../scripts/helperFunctions.php');
 require('../scripts/showQuicklinkRecords.php');
-
 ?>
     <head>
         <meta charset = "utf-8">
@@ -33,11 +28,6 @@ require('../scripts/showQuicklinkRecords.php');
                     <div class="navbar">
                         <ul>
                             <li><a href="searchClass.php">Search Classrooms</a></li>
-                         <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-                            <div class="dropdown-content">
-                                <a href="">Lost</a>
-                                <a href="">Found</a>
-                            </div> -->
                             </li>
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
@@ -52,14 +42,14 @@ require('../scripts/showQuicklinkRecords.php');
                 </div>
                 <div id="entryform">
                     <?php
-                    // If the search button is pressed
+                    #If the search button is pressed
                     if(isset($_POST['Search'])){
-                        // get all values from the form
+                        #get the room number user is searching for
                         $room_num = $_POST['query'];
                         $page = 'searchResults.php?room_num='.$room_num;
+                        #redirect to the results page
                         redirect($page);
                     }
-
                     ?>
                     <form method="POST">
                         <input id="text" name="query" placeholder="Enter classroom number" value="<?php if(isset($_POST['query'])) echo $_POST['query'];?>" required>

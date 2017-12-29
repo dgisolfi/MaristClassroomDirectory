@@ -1,14 +1,10 @@
 <!-- adminLogin.php
-Create a site for Limbo using CSS
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+A login form for admins
+Authors: Daniel Gisolfi
+Version 1.0 -->
 <!DOCTYPE html>
 <html>
 <?php
-#outputs errors for debugging
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
-
 require('../scripts/redirect.php');
 require('../scripts/helperFunctions.php');
 

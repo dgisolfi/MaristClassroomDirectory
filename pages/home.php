@@ -1,15 +1,10 @@
 <!-- home.php
-Create a site for the classroom view of Marist College
+The starting page for all users that displays a map of campus
 Author: Daniel Gisolfi
-Version 0.1 -->
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
-<?php
-# Required PHP files to include
-//require('../scripts/connect_db.php');
-
-?>
 	<head>
 		<meta charset = "utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css"> 
@@ -45,6 +40,7 @@ Version 0.1 -->
 
 					<script>
 					function myMap() {
+						// Declare a starting point and type of map
 						var mapProp= {
 						    center:new google.maps.LatLng(41.722545, -73.934117),
 						    zoom:15,
@@ -52,7 +48,7 @@ Version 0.1 -->
 						};
 						
 
-
+						//All locations and cords opf buildi
 				       var locations = [
 				         ['Cannavino Library',  41.721943, -73.934141, 0, 'ShowBuilding.php?id=1'],
 				         ['Donnelly Hall',  41.720858, -73.932443, 0, 'ShowBuilding.php?id=2'],
@@ -69,6 +65,7 @@ Version 0.1 -->
 				         ['West Cedar Townhouses(Upper)',  41.721478, -73.926059, 0, 'ShowBuilding.php?id=13'],
 						];
 
+						// Declare the cords of donnelly for starting point
 						var Donnely = new google.maps.LatLng(41.720858, -73.932443);
 
 					

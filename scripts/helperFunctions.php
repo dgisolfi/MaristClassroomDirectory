@@ -1,10 +1,11 @@
-
+<!-- helperFunctions.php
+Additional functions needed for MaristClassroom. directory
+Author: Daniel Gisolfi
+Version 1.0  -->
 <?php
-
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 require('connect_db.php');
 
+#Return an SQL error to the site if one exits
 function check_results($results) {
   global $dbc;
   if($results != true){
@@ -13,7 +14,7 @@ function check_results($results) {
   return true ;
 }
 
-
+#Ensures the username for an admin is valis 
 function validateName($input){
 	global $dbc;
 	$query = "SELECT first_name FROM admins WHERE user_name='" . $input . "'";
@@ -26,6 +27,8 @@ function validateName($input){
       return true;
  	}
 }
+
+
 # Hashes password and validates it against password in database
 function validatePass($userName, $pw){
 	global $dbc;
@@ -42,6 +45,7 @@ function validatePass($userName, $pw){
   }
 }
 
+#Takes a buildinmg ID value and returns a string of ther building name
 function buildingToName($id){
   global $dbc;
   $query = "SELECT building_Name FROM buildings WHERE build_id = " .$id. "";

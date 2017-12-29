@@ -1,19 +1,14 @@
-
 <!--ShowClassroom.php
 Create a site for the classroom view of Marist College
 Author: Daniel Gisolfi
-Version 0.1 -->
-
+Version 1.0 -->
 <!DOCTYPE HTML>
 <html>
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
 # Required PHP files to include
 require('../scripts/connect_db.php');
 require('../scripts/helperFunctions.php');
 require('../scripts/show_record.php');
-
 ?>
     <head>
         <meta charset = "utf-8">
@@ -32,11 +27,6 @@ require('../scripts/show_record.php');
                     <div class="navbar">
                         <ul>
                             <li><a href="searchClass.php">Search Classrooms</a></li>
-                         <!--   <li class="dropdown"><a href="#" class="dropbtn">Report an Item</a>
-                            <div class="dropdown-content">
-                                <a href="">Lost</a>
-                                <a href="">Found</a>
-                            </div> -->
                             <li class="adminlink"><a href="adminLogin.php">Admin</a></li>
                         </ul>
                     </div>
@@ -47,19 +37,24 @@ require('../scripts/show_record.php');
                 <!-- homepage welcome message/title -->
                 <div id="banner">
                     <?php
+                    #get the id of the classroom 
                     if(isset($_GET['id'])) {
                         $id = $_GET['id'];
                     }
+
+                    #get the room number from the database
                     if(isset($_GET['room_num'])) {
                         $room_num = $_GET['room_num'];
                     }
-                    // $buildingName = buildingToName($id);
+                    
+                    #Display the room number in the banner
                     echo "<h1> Room " . $room_num . "</h1>";
                     ?>
                     <p>Below are all available details of this room</p>
                 </div>
                 <div id="iteminfo">
                     <?php
+                    #call the function to show all records
                     show_record($dbc, $id, $room_num);
                     ?>
                 </div>

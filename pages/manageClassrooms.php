@@ -1,7 +1,7 @@
 <!-- manageAdmins.php
-Create a site for Limbo using CSS
-Authors: James Ekstract, Daniel Gisolfi
-Version 0.1 -->
+A site to manage all records of Classrooms within the DB
+Authors: Daniel Gisolfi
+Version 1.0 -->
 
 <!DOCTYPE HTML>
 <html>
@@ -11,19 +11,11 @@ require('../scripts/connect_db.php');
 require('../scripts/showRecords.php');
 require('../scripts/inputRecord.php');
 
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
-
 # Perform changes to database if made in table
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(isset($_POST['deleteID'])) {
 		$id = $_POST['deleteID'];
 		delete_class($dbc, $id);
-	// } else {
-	// 	$username = $_POST['username'];
-	// 	$password1 = $_POST['password1'];
-	// 	$password2 = $_POST['password2'];
-	// 	insert_admin_record($dbc);	
 	}
 }  			
 ?>
@@ -61,7 +53,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			   			<h1>Manage Classrooms</h1>
 			   			<p>Add or Remove classroom records that can be accessed. To delete a record from the system press the minus symbol to the left of the record. To add a record press the "Add" button below.</p>
 			   		</div>
-					<!-- create table -->
+				<!-- create table -->
+				<!-- create a responsive table	 -->
 				<div style="overflow-x:auto;">
 						
 		   			<table class="qltable">
@@ -82,7 +75,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		   			# Close database connection
 		   			mysqli_close($dbc);
-
+		   			
 		   			if(isset($_POST['addClass'])){
 		  				redirect('addClassroom.php');
 	  				}

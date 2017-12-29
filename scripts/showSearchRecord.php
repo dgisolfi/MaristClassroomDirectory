@@ -1,9 +1,9 @@
-
+<!--showSearchRecord.php
+Create a site for the classroom view of Marist College
+Author: Daniel Gisolfi
+Version 1.0 -->
 
 <?php
-ini_set('display_errors', TRUE);
-error_reporting(E_ALL);
-
 # Shows link records
 function show_search_records($dbc, $room_num) {
 	# Create database query for specified id

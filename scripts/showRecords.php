@@ -1,6 +1,8 @@
+<!--ShowRecords.php
+Functions that show all records of a table in their respective managing pages
+Author: Daniel Gisolfi
+Version 1.0 -->
 <?php
-$debug = true;
-
 # Shows admin records
 function show_admin_records($dbc) {
 	# Create database query for specified table
