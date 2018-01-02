@@ -23,6 +23,7 @@ The classroom management tool is used to add or remove classrooms directly from 
 
 ##### Adding Classrooms
 When the "Add Classroom" button is pressed you are redirected to a page with a form instructing you to fill in all required fields and submit. When entering a building ID make sure corresponds to the correct building (you can find the building ID’s on the manage buildings page). When entering a file path for wither the software files or images you will need to use the format found below. Ensure the file can be found at that path and then add the record. The new classroom record should appear in the manage classrooms table as well as within all other views on the site.
+
 **Software List**
 
 “../data/software/RoomNumber.txt”
