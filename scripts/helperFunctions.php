@@ -38,6 +38,7 @@ function validatePass($userName, $pw){
   $results = mysqli_query($dbc, $query);
  	check_results($results);
   $row = mysqli_fetch_array($results, MYSQLI_ASSOC);
+    echo $row['pass'] ;
   if(password_verify($pw, $row['pass'])) {
     return true;
   } else {
